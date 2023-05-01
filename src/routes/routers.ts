@@ -2,6 +2,7 @@ import { Server, Socket } from "socket.io";
 import * as TodoController from '../controller/todoController';
 import Router from "../utils/router";
 
+// There defines all of the routes from the websocket.
 const router: Router = new (Router as any)();
 
 router.get('addTodo', TodoController.addTodo);

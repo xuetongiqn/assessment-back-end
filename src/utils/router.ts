@@ -1,6 +1,8 @@
 import { Server, Socket } from "socket.io";
 
-type Router = {
+// Define the router, it is the routes handle class.
+
+export type Router = {
   tags: { [key: string]: () => {} },
   get: (tag: string, controller: (data: any, socket: Socket, server: Server) => {}) => void,
   use: (tag: string, data:any, server: Server, socket: Socket) => void,

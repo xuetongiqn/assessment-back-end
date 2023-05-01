@@ -1,6 +1,8 @@
 import { Op } from 'sequelize';
 import Todo from '../model/Todo';
 
+// Change the database here.
+
 export function addTodo(text: string, priority = 1, isCompleted = false) {
   return Todo.sync().then(() => {
     return Todo.create({
@@ -47,7 +49,8 @@ export async function geCompletedList(limit: number = 10, query?: string) {
     limit,
     order: [['completedTime', 'DESC']]
   });
-
+  
+  // the done list should sorted by alphabet
   list.sort((a: any, b: any) => {
     if (a.text < b.text) return -1;
     if (a.text > b.text) return 1;

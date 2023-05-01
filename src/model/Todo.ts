@@ -1,6 +1,7 @@
 import DataType from 'sequelize';
 import Model from'./sequelize';
 
+// The table structure, 'priority' isn't use in current version.
 const Todo = Model.define('todo', {
     id: {
         type: DataType.INTEGER,
@@ -11,7 +12,7 @@ const Todo = Model.define('todo', {
         type: DataType.STRING,
         allowNull: false,
     },
-    priority: {
+    priority: { 
         type: DataType.INTEGER,
         defaultValue: 1,
         allowNull: false
