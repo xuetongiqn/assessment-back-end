@@ -16,7 +16,7 @@ The routes are in ```routes/routers.ts```.
 The data model is in ```model/Todo.ts```.
 The main business logics are in ```controller/todoController.ts```.
 
-In the websocket part, if there is any update of the list by a client, server will send boardcast message to all of the clients in order to update the data.
+In the websocket part, if there is any update of the list by a client, server will send boardcast message to all of the clients in order to update the data. More details are [here](https://github.com/xuetongiqn/assessment-front-end#description).
 
 ## Install
 This project uses [Koa2](https://koajs.com/), [PostgreSQL](https://www.postgresql.org/) and [Socket.io](https://socket.io/). Please install the dependencies first.
